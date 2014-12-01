@@ -7,7 +7,7 @@ public class Searchapp extends javax.swing.JFrame {
     public Searchapp() {
         initComponents();
         try{
-         FileReader fr = new FileReader("..\\..\\src\\Studata.txt");
+         FileReader fr = new FileReader("Studata.scr");
          BufferedReader br = new BufferedReader(fr);
          String name, ad;
          int id;
@@ -17,13 +17,10 @@ public class Searchapp extends javax.swing.JFrame {
              id= Integer.parseInt(br.readLine());
              s[x]= new ISSstudent(name,ad,id);
              System.out.println(s[x]);
-             
          }
          
-        }catch(Exception e){}//  System.out.println(e.toString());
+        }catch(Exception e){}
     }
-
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
