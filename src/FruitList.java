@@ -21,8 +21,11 @@ public class FruitList {
             System.out.println(Fruit[x]);
         
         //Now removing kiwi
+        System.out.println("Removing Kiwi");
         loc = search(Fruit, "Kiwi");
         delete(Fruit, loc);
+        for(int x=0;x<logicalSize;x++)
+            System.out.println(Fruit[x]);
         
         
         
