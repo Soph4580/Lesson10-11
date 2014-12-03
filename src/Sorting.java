@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class Sorting extends javax.swing.JFrame {
     
     DefaultListModel model;
-    int nums[] = new int[50000];
+    int nums[] = new int[100000];
         
     public Sorting() {
         initComponents();
@@ -98,9 +98,9 @@ public class Sorting extends javax.swing.JFrame {
     private void btnbubbleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbubbleActionPerformed
        //clear list
         model.clear();
-        long stime = System.nanoTime();
+        long stime = System.currentTimeMillis();
         bubbleSort(nums);
-        long etime = (System.nanoTime() - stime)/1000000000;
+        long etime = (System.currentTimeMillis() - stime)/1000;
         JOptionPane.showMessageDialog(this, "Time it took: " + etime);
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
@@ -111,7 +111,10 @@ public class Sorting extends javax.swing.JFrame {
     private void btnselcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnselcActionPerformed
       //clear list
         model.clear();
+        long stime = System.currentTimeMillis();
         selectionSort(nums);
+        long etime = (System.currentTimeMillis() - stime)/1000;
+        JOptionPane.showMessageDialog(this, "Time it took: " + etime);
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
             model.addElement(nums[x]);
@@ -121,7 +124,10 @@ public class Sorting extends javax.swing.JFrame {
     private void btninsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninsertActionPerformed
         //clear list
         model.clear();
+        long stime = System.currentTimeMillis();
         insertionSort(nums);
+        long etime = (System.currentTimeMillis() - stime)/1000;
+        JOptionPane.showMessageDialog(this, "Time it took: " + etime);
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
             model.addElement(nums[x]);
