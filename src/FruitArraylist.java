@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 public class FruitArraylist extends javax.swing.JFrame {
 
@@ -23,18 +24,19 @@ public class FruitArraylist extends javax.swing.JFrame {
 	   int left = 0;
 	   int right = a.size()-1;
 	   int midpoint=0;
+           Object item;
 	   
 	   while (left <= right){
 	      midpoint = (left + right) / 2;
-	   
-	      int result = ((Comparable)a[midpoint]).compareTo(searchValue); 
+	      item =a.get(midpoint);
+	      int result = ((Comparable)item).compareTo(searchValue); 
 	   
 	     if (result < 0)
 	         left = midpoint + 1;
 	      else
 	         right = midpoint-1;
 	   }
-	   if(((Comparable)a[midpoint]).compareTo(searchValue) < 0)
+	   if(((Comparable)item).compareTo(searchValue) < 0)
 	   midpoint++;
 	   return midpoint;	   
 }
@@ -98,11 +100,18 @@ public class FruitArraylist extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
-        
+        String f = JOptionPane.showInputDialog(this, "Enter new Fruit: ");
+        //Where does it go?
+        int loc = findInsertPoint(fruit, f);
+        fruit.add(loc, f);
+        model.add(loc, f); //Updates display
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void btnremoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremoveActionPerformed
-       
+       //Which thing is selected in list?
+        int loc = lstfruit.getSelectedIndex();
+        fruit.remove(loc);
+        model.remove(loc);
     }//GEN-LAST:event_btnremoveActionPerformed
 
     
