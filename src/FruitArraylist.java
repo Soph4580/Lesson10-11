@@ -17,26 +17,28 @@ public class FruitArraylist extends javax.swing.JFrame {
         fruit.add("Orange");
         //Add these to the model
         for(int x=0;x<fruit.size();x++)
+        {    
         model.addElement(fruit.get(x));
         lstfruit.setModel(model);
+        }
     }
     public static int findInsertPoint (ArrayList a, Object searchValue){
 	   int left = 0;
 	   int right = a.size()-1;
 	   int midpoint=0;
-           Object item;
+           Object item = null;
 	   
 	   while (left <= right){
 	      midpoint = (left + right) / 2;
-	      item =a.get(midpoint);
-	      int result = ((Comparable)item).compareTo(searchValue); 
+	      item= a.get(midpoint);
+	      int result = ((Comparable)a[midpoint]).compareTo(searchValue); 
 	   
 	     if (result < 0)
 	         left = midpoint + 1;
 	      else
 	         right = midpoint-1;
 	   }
-	   if(((Comparable)item).compareTo(searchValue) < 0)
+	   if(((Comparable)a[midpoint]).compareTo(searchValue) < 0);
 	   midpoint++;
 	   return midpoint;	   
 }

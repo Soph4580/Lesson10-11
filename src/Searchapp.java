@@ -7,7 +7,7 @@ public class Searchapp extends javax.swing.JFrame {
     public Searchapp() {
         initComponents();
         try{
-         FileReader fr = new FileReader("Studata.scr");
+         FileReader fr = new FileReader("studata.scr");
          BufferedReader br = new BufferedReader(fr);
          String name, ad;
          int id;
