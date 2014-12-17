@@ -100,7 +100,7 @@ public class Sorting extends javax.swing.JFrame {
         long stime = System.currentTimeMillis();
         bubbleSort(nums);
         long etime = (System.currentTimeMillis() - stime)/1000;
-        JOptionPane.showMessageDialog(this, "Time it took: " + etime);
+        JOptionPane.showMessageDialog(this, "Time it took: " + etime +" seconds.");
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
             model.addElement(nums[x]);
@@ -113,7 +113,7 @@ public class Sorting extends javax.swing.JFrame {
         long stime = System.currentTimeMillis();
         selectionSort(nums);
         long etime = (System.currentTimeMillis() - stime)/1000;
-        JOptionPane.showMessageDialog(this, "Time it took: " + etime);
+        JOptionPane.showMessageDialog(this, "Time it took: " + etime + " seconds.");
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
             model.addElement(nums[x]);
@@ -126,7 +126,7 @@ public class Sorting extends javax.swing.JFrame {
         long stime = System.currentTimeMillis();
         insertionSort(nums);
         long etime = (System.currentTimeMillis() - stime)/1000;
-        JOptionPane.showMessageDialog(this, "Time it took: " + etime);
+        JOptionPane.showMessageDialog(this, "Time it took: " + etime + " seconds.");
         //rebuild list
         for (int x = 0;x < nums.length;x ++){
             model.addElement(nums[x]);
