@@ -14,7 +14,13 @@ public class Hanoi {
         System.out.println("Total moves = " + nummoves);
     }
     
-    public static void move(int n, int j, int i, int k){
+    public static void move(int n, int i, int j, int k){
+        if(n>0){
+            nummoves++;
+            move(n-1, i, k, j);
+            System.out.println("Move rings " + n + " from peg " + i + " to peg "+ j);
+            move(n-1, k, j, i);
+        }
         
     }
     

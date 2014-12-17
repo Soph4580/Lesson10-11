@@ -31,14 +31,14 @@ public class FruitArraylist extends javax.swing.JFrame {
 	   while (left <= right){
 	      midpoint = (left + right) / 2;
 	      item= a.get(midpoint);
-	      int result = ((Comparable)a[midpoint]).compareTo(searchValue); 
+	      int result = ((Comparable)item).compareTo(searchValue); 
 	   
 	     if (result < 0)
 	         left = midpoint + 1;
 	      else
 	         right = midpoint-1;
 	   }
-	   if(((Comparable)a[midpoint]).compareTo(searchValue) < 0);
+	   if(((Comparable)item).compareTo(searchValue) < 0);
 	   midpoint++;
 	   return midpoint;	   
 }
